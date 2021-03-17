@@ -14,7 +14,7 @@ public class BasicEncrypter implements Encrypter {
     public byte[] decrypt(byte[] data) {
         byte[] dec = new byte[data.length];
         for (int i = 0; i < data.length; i++) {
-            dec[i] = (byte) (i % 2 == 0 ? data[i] - 1 : data[i] + 1);
+            dec[i] = (byte) (i % 2 == 0 ? data[i] + 1 : data[i] - 1);
         }
         return dec;
     }
